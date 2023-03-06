@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript handson 3</title>
+</head>
+<style>
+  body{
+    background-color: cyan;
+    border: 10px double red;
+  }
+  h2{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+  pre{
+    color: white;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    color: deeppink;
+    font-size: 20px;
+  }
+</style>
+<body>
+    <h2>1. Find the no. of digits</h2>
+    <pre>  const Find_Digits = (N) => 
+{
+  let ans =0;
+  while(N!==0){
+    ans++;
+    N=Math.floor(N/10);
+  }
+  return ans;
+};</pre>
+<h2>2. Find the Fives</h2>
+<pre> const Find_Five = (N) => 
+                {
+                  let count=0
+                  let i
+                 while(N!==0)
+                 {
+                   i=N%10;
+                   if(i===5)
+                    {
+                       count=count+1;
+                    }
+                       
+                    N=Math.floor(N/10);
+                 }
+                   return count; 
+                };</pre>
+<h2>3. Find Sum.</h2>
+<pre> const findSum = (n) => {
+                    let sum=0
+                    for(i=1; i<=n; i++)  {
+                      if(i%2===0)
+                      sum=sum+i
+                    }
+                    return(sum)
+                  };</pre>
+<h2>4. Find the sum of the digits of a given number</h2>
+<pre>       const Number_Sum = (N) => 
+{
+  let count=0,r
+  
+ while(N!==0){
+    r=N%10
+    count=count+r
+    N=Math.floor(N/10)
+   
+ }
+ 
+ return(count)
+};</pre>
+<h2>5. Print the Odds.</h2>
+<pre>const Print_Odd = (N) => 
+{
+ for(let i=2; i<=N; i++)	 
+ {
+   if(i===2)
+   console.log(i)
+   if(i%2!==0)
+   console.log(i);
+ }
+};</pre>
+<h2>6. Print the Pattern.</h2>
+<pre>const Print_pattern = (N) => 
+  {
+    let star='';
+   for(let i=1; i<=N; i++){
+     for(let j=1;j<=i;j++)
+     {
+       star=star+'*';
+     }
+     star=star+"\n";
+   }
+   
+   console.log(star);
+  };</pre>
+  <h2>7. Check if the number is Prime or not.</h2>
+  <pre> const Prime_Check = (N) => 
+    {
+      let check=0;
+     for(let i=1; i<=N; i++)
+     {
+       if(N%i===0){
+         check++;
+       }
+     }
+     if(check===2){
+      return"YES";
+     }
+    else{
+      return 'NO';
+    }
+    };</pre>
+    <h2>Print Numbers</h2>
+    <pre>const printNumbers = (n) => {
+      for(let i=1; i<=n; i++)  {
+        console.log(i);
+      }
+    };</pre>
+    <h2>9. Print the Table.</h2>
+    <pre> const Print_Table = (N) => 
+      {
+            for(let i=1; i<=10; i++){
+              console.log(N + " * " + i + " = " + N*i );
+              
+          }
+      };</pre>
+</body>
+</html>
